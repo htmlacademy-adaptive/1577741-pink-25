@@ -4,8 +4,8 @@
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.11"
+    "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "0.1.11"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -19,10 +19,10 @@
     "source/*.html"
   ],
   "engines": {
-    "node": "^16"
+    "node": "16"
   },
   "type": "module",
   "dependencies": {
-    "postcss": "^8.4.12"
+    "postcss": "8.4.12"
   }
 }
