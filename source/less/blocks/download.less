@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   background-color: #1d2631;
+  color: #ffffff;
 }
 
 .download__slogan {
@@ -32,4 +33,13 @@
 .download__availability {
   .font p();
   color: #ffffff;
+}
+
+.download__wrapper {
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 1060px;
+    display: flex;
+    align-items: left;
+  }
 }

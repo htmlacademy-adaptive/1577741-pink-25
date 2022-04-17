@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-nav__toggle {
   position: relative;
   display: none;
@@ -15,7 +21,38 @@
   background-color: transparent;
 }
 
-.main-nav a {
+.main-nav__list a {
   .font nav();
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 1060px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 780px;
+  }
 }

@@ -1,11 +1,28 @@
 .main-header {
+  display: flex;
+  flex-direction: column;
   background-color: #000000;
   padding: 0;
   margin: 0;
+  color: @white;
 }
 
 .main-header__logo {
+  height: 66px;
   margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__logo {
+    order: 2;
+    height: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__logo {
+    height: 110px;
+  }
 }
 
 .main-header__menu {

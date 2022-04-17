@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -86,6 +87,17 @@
       </div>
     </section>
 
+    <section class="research">
+      <div class="research__wrapper">
+        <h2 class="visually-hidden">Данные исследовании приложения</h2>
+        <div class="research__wrapper">
+          <p class="research__title">Эффект на 24 часа!</p>
+          <p class="research__about">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a href="#" class="research__link">Узнать больше об исследовании</a>
+        </div>
+      </div>
+    </section>
+
     <section class="review">
       <div class="review__wrapper">
         <h2 class="visually-hidden">Комментарии пользователей</h2>
@@ -110,31 +122,59 @@
       <div class="price__wrapper">
       <h2 class="visually-hidden">Стоимость приложения</h2>
         <table class="price__table">
+          <span class="visually-hidden">Стоимость тарифов приложения</span>
           <thead>
             <tr>
+              <th class="price__empty-cell"></th>
+              <th class="price__colhead">
+                <span class="price__tarif">База</span>
+                <span class="price__value">1,99 USD</span>
+              </th>
               <th class="price__colhead price__colhead-hit price__colhead--active">
                 <span class="price__tarif">Стандарт</span>
                 <span class="price__value">3,99 USD</span>
+              </th>
+              <th class="price__colhead">
+                <span class="price__tarif">Анлим</span>
+                <span class="price__value">9,99 USD</span>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th class="price__rowhead">Розовый фильтр</th>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
+              </td>
               <td class="price__cell price__cell--yes price__cell--active">
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__cell price__cell--yes">
                 <span class="visually-hidden">Есть</span>
               </td>
             </tr>
             <tr>
               <th class="price__rowhead">Смайлики</th>
+              <td class="price__cell price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
               <td class="price__cell price__cell--yes price__cell--active">
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__cell price__cell--no">
                 <span class="visually-hidden">Есть</span>
               </td>
             </tr>
             <tr>
               <th class="price__rowhead">Комментарии</th>
+              <td class="price__cell price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
               <td class="price__cell price__cell--no price__cell--active">
                 <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell price__cell--yes">
+                <span class="visually-hidden">Есть</span>
               </td>
             </tr>
           </tbody>
