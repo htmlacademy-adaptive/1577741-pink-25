@@ -15,13 +15,39 @@
 @media (min-width: @tablet-width) {
   .main-header__logo {
     order: 2;
-    height: 110px;
+    height: 23px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-header__logo {
     height: 110px;
+  }
+}
+
+.main-header__logotype {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__logotype {
+    height: 40px;
+    width: 145px;
+  }
+
+  .main-header__logo {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__logotype {
+    height: 40px;
+    width: 145px;
+  }
+
+  .main-header__logo {
+    display: none;
   }
 }
 
