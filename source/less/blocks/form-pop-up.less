@@ -1,3 +1,7 @@
+.form-pop-up {
+  display: flex;
+}
+
 .form-pop-up__title {
   .font adv();
   color: #000000;
@@ -26,4 +30,20 @@
   .font p();
   color: #283645;
   padding-bottom: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-pop-up__text {
+    .pop-up();
+    color: #283645;
+    padding-bottom: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-pop-up__text {
+    .error();
+    color: #283645;
+    padding-bottom: 44px;
+  }
 }
