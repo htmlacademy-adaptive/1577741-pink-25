@@ -1,3 +1,7 @@
+.contest {
+  display: flex;
+}
+
 .contest__intro {
   background-color: #ffffff;
 }
@@ -11,10 +15,50 @@
   color: #ffffff;
 }
 
+@media (min-width: @tablet-width) {
+  .contest__heading-title {
+    .desktop();
+    color: #ffffff;
+    padding-top: 81px;
+    padding-bottom: 74px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest__heading-title {
+    .desktop();
+    color: #ffffff;
+    padding-top: 74px;
+    padding-bottom: 104px;
+    padding-left: 226px;
+    padding-right: 227px;
+  }
+}
+
 .contest__form {
   margin-left: 22px;
   margin-right: 22px;
   margin-bottom: 44px;
+}
+
+@media (min-width: @tablet-width) {
+  .contest__form {
+    background-color: #ffffff;
+    padding-top: 82px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest__form {
+    background-color: #ffffff;
+    padding-top: 95px;
+    padding-left: 132px;
+    padding-right: 132px;
+  }
 }
 
 .contest__operation-system {
@@ -69,28 +113,6 @@
   text-align: center;
 }
 
-.contest .pop-up {
-  padding-top: 46px;
-  padding-left: 22px;
-  padding-bottom: 52px;
-  padding-right: 22px;
-  background-color: #ffffff;
-}
-
-.contest .form-pop-up__title {
-  .font adv();
-  color: #000000;
-  padding-bottom: 35px;
-  padding-left: 39px;
-  padding-right: 39px;
-}
-
-.contest .form-pop-up__text {
-  .font p();
-  color: #283645;
-  padding-bottom: 50px;
-}
-
 .contest__about {
   .font rev();
   padding-top: 54px;
@@ -98,6 +120,26 @@
   padding-right: 20px;
   padding-bottom: 55px;
   color: #283645;
+}
+
+@media (min-width: @tablet-width) {
+  .contest__about {
+    .input();
+    color: #283645;
+    padding-top: 100px;
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest__about {
+    .input();
+    color: #283645;
+    padding-top: 100px;
+    padding-left: 222px;
+    padding-right: 222px;
+  }
 }
 
 .contest__achievements {
