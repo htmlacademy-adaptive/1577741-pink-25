@@ -1,118 +1,45 @@
 .contest {
-  display: flex;
-}
+  padding-top: 45px;
 
-.contest__intro {
-  background-color: #ffffff;
-}
-
-.contest__heading-title {
-  .contacts();
-  padding-top: 36px;
-  padding-left: 46px;
-  padding-right: 46px;
-  padding-bottom: 51px;
-  color: #ffffff;
-}
-
-@media (min-width: @tablet-width) {
-  .contest__heading-title {
-    .desktop();
-    color: #ffffff;
-    padding-top: 81px;
-    padding-bottom: 74px;
-    padding-left: 20px;
-    padding-right: 20px;
+  @media (min-width: @tablet-width) {
+    padding-top: 92px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .contest__heading-title {
-    .desktop();
-    color: #ffffff;
-    padding-top: 74px;
-    padding-bottom: 104px;
-    padding-left: 226px;
-    padding-right: 227px;
+.contest__inner {
+  @include container;
+
+  @media (max-width: @phone-max) {
+    width: 100%;
+    padding: 0;
   }
 }
 
-.contest__form {
-  margin-left: 22px;
-  margin-right: 22px;
-  margin-bottom: 44px;
-}
-
-@media (min-width: @tablet-width) {
-  .contest__form {
-    background-color: #ffffff;
-    padding-top: 82px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .contest__form {
-    background-color: #ffffff;
-    padding-top: 95px;
-    padding-left: 132px;
-    padding-right: 132px;
-  }
-}
-
-.contest__operation-system {
-  background-color: #f2f2f2;
-}
-
-.contest__submit {
-  background-color: #ffffff;
-}
-
-  text-transform: uppercase;
-  margin-top: 52px;
-  margin-left: 22px;
-  margin-right: 22px;
-  margin-bottom: 52px;
-  padding-top: 23px;
-  padding-left: 65px;
-  padding-bottom: 23px;
-  padding-right: 65px;
+.contest__lead {
+  @include container;
+  @include reset-child-margins;
+  line-height: 30px;
   text-align: center;
-}
 
-.contest__about {
-  padding-top: 54px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 55px;
-  color: #283645;
-}
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 
-@media (min-width: @tablet-width) {
-  .contest__about {
-    .input();
-    color: #283645;
-    padding-top: 100px;
-    padding-left: 85px;
-    padding-right: 85px;
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 68px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .contest__about {
-    .input();
-    color: #283645;
-    padding-top: 100px;
-    padding-left: 222px;
-    padding-right: 222px;
+.contest__lead-fill-form {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
-
-.contest__achievements {
-  background-color: #f2f2f2;
-}
-
-.contest__contacts {
-  background-color: #ffffff;
-}  

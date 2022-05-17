@@ -1,0 +1,38 @@
+.page-footer {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: @phone-max) {
+    text-align: center;
+
+    &--index {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 72px;
+  }
+}
+
+.page-footer__logo {
+  display: inline-block;
+  vertical-align: top;
+
+  @media (min-width: @tablet-width) {
+    width: 150px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 170px;
+  }
+}
