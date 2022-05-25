@@ -6,22 +6,40 @@
 
 .rates__wrapper {
   position: relative;
-  background-color: @grey-light;
   padding-top: 91px;
   padding-bottom: 42px;
-
-  @include angled-bg;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: @grey-light url("../img/bg-triangle-white.svg") no-repeat center top;
+  background-size: 100% @height;
+  z-index: 0;
   max-width: 100%;
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    @include angled-bg(@height: 50px);
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: @grey-light url("../img/bg-triangle-white.svg") no-repeat center top;
+    background-size: 100% @height;
+    z-index: 0;
     padding-top: 88px;
     padding-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
-    @include angled-bg(@height: 65px);
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: @grey-light url("../img/bg-triangle-white.svg") no-repeat center top;
+    background-size: 100% @height;
+    z-index: 0;
     padding-top: 140px;
     padding-bottom: 96px;
   }
@@ -138,14 +156,13 @@
 
 .rates__item {
   position: relative;
-  border-top: 0;
   padding-top: 17px;
   padding-right: 68px;
   padding-bottom: 18px;
   padding-left: 22px;
   background-color: @white;
   border: 2px solid @grey;
-  border-top-width: 0;
+  border-top: 0;
   background-clip: padding-box;
 
   @media (min-width: @tablet-width) {
