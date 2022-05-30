@@ -12,6 +12,14 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import rename from 'gulp-rename';
+import csso from 'postcss-csso';
+import del from 'del';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 
 // CSS
 
@@ -21,11 +29,94 @@ export const styles = () => {
     .pipe(less())
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      csso({
+        restructure: false,
+        sourceMap: true,
+        debug: true
+      })
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+};
+
+// HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+};
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(terser())
+    .pipe(rename('script.min.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+};
+
+// Copy fonts
+const copyFonts = () => {
+  return gulp.src('source/fonts/*.{woff,woff2}')
+    .pipe(gulp.dest('build/fonts'));
+};
+
+// Copy favicon
+const copyIco = () => {
+  return gulp.src('*.ico')
+    .pipe(gulp.dest('build'));
+};
+
+// Optimize Images
+
+const optimizeImages = () => {
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*.png'])
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+};
+
+// WebP
+
+const createWebp = () => {
+  return gulp
+    .src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({webp: {}}))
+    .pipe(gulp.dest('build/img'));
+};
+
+// SVG
+
+const svg = () =>
+  gulp.src('source/img/**/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+
+// SVG Sprite
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true,
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+};
+
+// Copy images
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(gulp.dest('build/img'));
+};
+
+// Clean
+
+export const clean = () => {
+  return del('build');
 };
 
 // HTML
@@ -128,13 +219,20 @@ const reload = (done) => {
   done();
 };
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+};
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));
-};
+
 
 // Build
 
