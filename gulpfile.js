@@ -105,6 +105,7 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'));
 };
 
+
 // Clean
 
 export const clean = () => {
