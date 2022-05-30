@@ -105,7 +105,6 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'));
 };
 
-
 // Clean
 
 export const clean = () => {
@@ -117,7 +116,7 @@ export const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
