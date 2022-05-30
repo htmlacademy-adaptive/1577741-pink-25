@@ -58,17 +58,41 @@
 }
 
 .advantages__wrapper {
-  @include angled-bg (@height: 31px, @top: 0);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: @grey-light url("../img/bg-triangle-white.svg") no-repeat center top;
+  background-size: 100%;
+  z-index: 0;
+  @height: 31px;
+  @top: 0;
   position: relative;
   padding-top: 80px;
 
   @media (min-width: @tablet-width) {
-    @include angled-bg (@height: 51px, @top: 0);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: @grey-light url("../img/bg-triangle-white.svg") no-repeat center top;
+    background-size: 100%;
+    z-index: 0;
+    @height: 51px;
+    @top: 0;
     padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    @include angled-bg (@height: 74px, @top: 87px);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: @grey-light url("../img/bg-triangle-white.svg") no-repeat center top;
+    background-size: 100%;
+    z-index: 0;
+    @height: 74px;
+    @top: 87px;
     padding-top: 75px;
   }
 }
